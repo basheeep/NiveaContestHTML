@@ -1,16 +1,17 @@
+<?php require_once 'functions/init.php' ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Modist - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -22,7 +23,7 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -30,28 +31,28 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light ftco-navbar-light-2" id="ftco-navbar">
-	    
+
 
 	      <div class="container">
-	      <a class="navbar-brand" href="index.html">NIVEA <br> Contest</a>
+	      <a class="navbar-brand" href="index.php">NIVEA <br> Contest</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item"><a href="login.html" class="nav-link">Login/ Sign Up</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="products.php" class="nav-link">Products</a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="login.php" class="nav-link">Login/ Sign Up</a></li>
+	          <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
-		
+
 		<div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.png');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -61,33 +62,48 @@
         </div>
       </div>
     </div>
-		
+
 		<section class="ftco-section">
+    <div class="container">
+    <div> <?php successMsg(); ?> </div>
+    </div>
+     <?php if (!login_user()): ?>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-8 ftco-animate">
-						<form action="#" class="billing-form bg-light p-3 p-md-5">
-							<h3 class="mb-4 billing-heading">Login Details</h3>
+						<form  method="POST" action="" class="billing-form bg-light p-3 p-md-5">
+              <h3 class="mb-4 billing-heading">Login Details</h3>
+              <?php
+                user_login();
+                ?>
 	          	<div class="row align-items-end">
 	          		<div class="col-md-6">
 	                <div class="form-group">
 	                	<label for="emailaddress">Email Address</label>
-	                  <input type="text" class="form-control" placeholder="">
+	                  <input type="email"  name="email" class="form-control" placeholder="Enter your Email Address">
 	                </div>
 	              </div>
                     <div class="w-100"></div>
 	              <div class="col-md-6">
 	                <div class="form-group">
 	                	<label for="password">Password</label>
-	                  <input type="text" class="form-control" placeholder="">
+	                  <input type="password" name="password"  class="form-control" placeholder="">
 	                </div>
                 </div>
-                <div class="w-100"></div>
+
+
+
+                <div class="w-100">
+                <?php  if (isset($login_errors['u'])): ?>
+                    <span class="text-danger">
+                      <?php echo $login_errors['u']; ?>
+                    </span>
+                    <?php endif;  ?></div>
                 <div class="col-md-12">
                 	<div class="form-group mt-4">
-										
-                        <p><a href="#"class="btn btn-primary py-3 px-4">Place an order</a></p>
-                        <p><a href="signup.html">Don't have an Account? Register Now</a></p>
+
+                        <button type ="submit" name="login" class="btn btn-primary py-3 px-4">Login</button>
+                        <p><a href="signup.php">Don't have an Account? Register Now</a></p>
 									</div>
                 </div>
 	            </div>
@@ -96,6 +112,7 @@
           </div> <!-- .col-md-8 -->
         </div>
       </div>
+     <?php endif; ?>
     </section> <!-- .section -->
 
 
@@ -104,7 +121,7 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Modist</h2>
+              <h2 class="ftco-heading-2">Nivea <br> Contest</h2>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -163,8 +180,8 @@
         </div>
       </div>
     </footer>
-    
-  
+
+
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -192,19 +209,19 @@
 
 		var quantitiy=0;
 		   $('.quantity-right-plus').click(function(e){
-		        
+
 		        // Stop acting like a button
 		        e.preventDefault();
 		        // Get the field name
 		        var quantity = parseInt($('#quantity').val());
-		        
+
 		        // If is not undefined
-		            
+
 		            $('#quantity').val(quantity + 1);
 
-		          
+
 		            // Increment
-		        
+
 		    });
 
 		     $('.quantity-left-minus').click(function(e){
@@ -212,17 +229,17 @@
 		        e.preventDefault();
 		        // Get the field name
 		        var quantity = parseInt($('#quantity').val());
-		        
+
 		        // If is not undefined
-		      
+
 		            // Increment
 		            if(quantity>0){
 		            $('#quantity').val(quantity - 1);
 		            }
 		    });
-		    
+
 		});
 	</script>
-    
+
   </body>
 </html>

@@ -1,16 +1,17 @@
+<?php  require_once 'functions/init.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Modist - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Nivea Contest</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -22,7 +23,7 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -30,113 +31,119 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light ftco-navbar-light-2" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Modist</a>
+
+
+	      <div class="container">
+	      <a class="navbar-brand" href="index.php">NIVEA <br> Contest</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-	           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item"><a href="login.html" class="nav-link">Login/ Sign Up</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="products.php" class="nav-link">Products</a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+	          <li class="nav-item acive"><a href="login.php" class="nav-link">Login/ Sign Up</a></li>
+	          <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
-		
-		<div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
+
+		<div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.png');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-0 bread">Contact Us</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
+              <h1 class="mb-0 bread">Sign Up</h1>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="ftco-section contact-section bg-light">
+		<section class="ftco-section">
       <div class="container">
-        <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-white p-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-          
-          </div>
-
-          <div class="col-md-6 d-flex">
-          	<div id="map" class="bg-white"></div>
-          </div>
-        </div>
-        <div class="row d-flex mt-5 contact-info">
-          <div class="w-100"></div>
-          <div class="col-md-3 d-flex">
-          	<div class="info bg-white p-4">
-	            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="info bg-white p-4">
-	            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="info bg-white p-4">
-	            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="info bg-white p-4">
-	            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-	          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-		
-		<section class="ftco-section-parallax">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center py-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-            	<h1 class="big">Subscribe</h1>
-              <h2>Subcribe to our Newsletter</h2>
-              <div class="row d-flex justify-content-center mt-5">
-                <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
-                    </div>
-                  </form>
+        <div class="row justify-content-center">
+          <div class="col-xl-8 ftco-animate">
+						<form action="" method="POST"   class="billing-form bg-light p-3 p-md-5">
+            <?php register_user(); ?>
+							<h3 class="mb-4 billing-heading">Sign Up Details</h3>
+	          	<div class="row align-items-end">
+	          		<div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="firstname">Firt Name</label>
+	                  <input  name="f_name" type="text" class="form-control" placeholder=""  value=" <?php echo isset($fName) ? $fName : ""; ?> " >
+                    <?php if (isset($register_errors['fname'])) : ?>
+                <span class=" text-danger"><?php echo $register_errors['fname'] ?></span>
+                <?php endif ?>
+	                </div>
+	              </div>
+	              <div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="lastname">Last Name</label>
+	                  <input  name="l_name"  type="text" class="form-control" placeholder=""   value=" <?php echo isset($lName) ? $lName : ""; ?> " >
+                    <?php if (isset($register_errors['lname'])) : ?>
+                <span class=" text-danger"><?php echo $register_errors['lname'] ?></span>
+                <?php endif ?>
+	                </div>
                 </div>
-              </div>
-            </div>
-          </div>
+		            <div class="w-100"></div>
+		            <div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="phone">Phone</label>
+                    <input  name="phone" type="text" class="form-control" placeholder=""  required >
+                    <?php if (isset($register_errors['phone'])) : ?>
+                <span class=" text-danger"><?php echo $register_errors['phone'] ?></span>
+                <?php endif ?>
+	                </div>
+	              </div>
+	              <div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="emailaddress">Email Address</label>
+                    <input  name="email" type="email" class="form-control" placeholder="" required >
+                    <?php if (isset($register_errors['mail'])) : ?>
+                <span class=" text-danger"><?php echo $register_errors['mail'] ?></span>
+                <?php endif ?>
+	                </div>
+                </div>
+                    <div class="w-100"></div>
+		            <div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="password">Password</label>
+                    <input  name="password" type="password" class="form-control" placeholder="" required>
+                    <?php if (isset($register_errors['pass'])) : ?>
+                <span class=" text-danger"><?php echo $register_errors['pass'] ?></span>
+                <?php endif ?>
+	                </div>
+	              </div>
+	              <div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="password">Repeat Password</label>
+                    <input  name="c_password" type="password" class="form-control" placeholder="" required >
+                    <?php if (isset($register_errors['pass2'])) : ?>
+                <span class=" text-danger"><?php echo $register_errors['pass2'] ?></span>
+                <?php endif ?>
+	                </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-12">
+                	<div class="form-group mt-4">
+
+                         <button type ="submit"  name="register" class="btn btn-primary py-3 px-4">Register</button>
+                        <p><a href="login.php">Existing User ? Login Instead</a></p>
+				    </div>
+
+                </div>
+	            </div>
+	          </form><!-- END -->
+
+          </div> <!-- .col-md-8 -->
         </div>
       </div>
-    </section>
+    </section> <!-- .section -->
+
 
     <footer class="ftco-footer bg-light ftco-section">
       <div class="container">
@@ -202,8 +209,8 @@
         </div>
       </div>
     </footer>
-    
-  
+
+
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -225,6 +232,43 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+
+  <script>
+		$(document).ready(function(){
+
+		var quantitiy=0;
+		   $('.quantity-right-plus').click(function(e){
+
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        var quantity = parseInt($('#quantity').val());
+
+		        // If is not undefined
+
+		            $('#quantity').val(quantity + 1);
+
+
+		            // Increment
+
+		    });
+
+		     $('.quantity-left-minus').click(function(e){
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        var quantity = parseInt($('#quantity').val());
+
+		        // If is not undefined
+
+		            // Increment
+		            if(quantity>0){
+		            $('#quantity').val(quantity - 1);
+		            }
+		    });
+
+		});
+	</script>
+
   </body>
 </html>

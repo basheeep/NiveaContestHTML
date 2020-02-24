@@ -1,16 +1,17 @@
+<?php  require_once 'functions/init.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Nivea Contest</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -22,7 +23,7 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -31,25 +32,32 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">NIVEA <br> Contest</a>
+	      <a class="navbar-brand" href="index.php">NIVEA <br> Contest</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item"><a href="login.html" class="nav-link">Login/ Sign Up</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="products.php" class="nav-link">Products</a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+	         <?php if (!login_user()): ?>
+            <li class="nav-item"><a href="login.php" class="nav-link">Login/ Sign Up</a></li>
+           <?php endif; ?>
+           <?php if (login_user()): ?>
+            <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
+           <?php endif; ?>
+	          <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
-		
+		<div>
+
+</div>
 		<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.png');">
       <div class="overlay"></div>
       <div class="container">
@@ -69,7 +77,7 @@
     </div>
 
     <div class="goto-here"></div>
-    
+
 
     <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
 			<div class="container">
@@ -85,9 +93,13 @@
 	          <div class="pb-md-5">
 							<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
 							<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+
+                  <p><a href="contest.php"class="btn btn-primary py-3 px-4">Join Now</a></p>
 						</div>
 					</div>
 				</div>
+
+
 			</div>
 		</section>
 
@@ -98,7 +110,7 @@
           	<h1 class="big">Products</h1>
             <h2 class="mb-4">Our Products</h2>
           </div>
-        </div>    		
+        </div>
     	</div>
     	<div class="container-fluid">
     		<div class="row">
@@ -114,7 +126,7 @@
 	    					</div>
 	    					<hr>
     						<p class="bottom-area d-flex">
-    							<a href="login.html" class="add-to-cart"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="login.php" class="add-to-cart"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
     							<a href="#" class="ml-auto"><span><i class="ion-ios-heart-empty"></i></span></a>
     						</p>
     					</div>
@@ -250,7 +262,7 @@
                 <h3 class="heading">Refund Policy</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-4 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services">
@@ -261,7 +273,7 @@
                 <h3 class="heading">Premium Packaging</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
-            </div>    
+            </div>
           </div>
           <div class="col-md-4 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services">
@@ -272,12 +284,12 @@
                 <h3 class="heading">Superior Quality</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
     	</div>
     </section>
-		
+
 		<section class="ftco-section-parallax">
       <div class="parallax-img d-flex align-items-center">
         <div class="container">
@@ -348,8 +360,8 @@
         </div>
       </div>
     </footer>
-    
-  
+
+
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -371,6 +383,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+
   </body>
 </html>
